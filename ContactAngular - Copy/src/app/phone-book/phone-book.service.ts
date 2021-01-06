@@ -27,6 +27,9 @@ export class PhoneBookService {
   addContact() {
     this.contacts.push({ name: '', phone: '', image: 'assets/images/placeholder.png' });
   }
+  deleteTodo(name){
+    this.contacts.filter(contact => contact.name !== name);
+  }
 
 
 }

@@ -27,6 +27,9 @@ export class ContactComponent implements OnInit {
   showDetails() {
     this.router.navigate(['/details', { name: this.contact.name }]);
   }
+  deleteTodo(name){
+    this.phonebookservice.deleteTodo(this.contact.name)
+    }
 
   selectFile(event) {
 
