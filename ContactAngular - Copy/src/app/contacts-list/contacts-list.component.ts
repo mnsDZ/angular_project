@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InterfaceContacts } from '../interface-contacts';
-import {PhoneBookService} from '../phone-book/phone-book.service';
+import { PhoneBookService } from '../phone-book/phone-book.service';
 
 @Component({
   selector: 'app-contacts-list',
@@ -8,12 +8,20 @@ import {PhoneBookService} from '../phone-book/phone-book.service';
   styleUrls: ['./contacts-list.component.css']
 })
 export class ContactsListComponent implements OnInit {
-  contacts:InterfaceContacts[];
-   
-  constructor(private phonebookservice: PhoneBookService ) { }
+  contacts: InterfaceContacts[];
+
+
+
+  constructor(private phonebookservice: PhoneBookService) { }
 
   ngOnInit(): void {
-    this.contacts=this.phonebookservice.getContacts()
+    this.contacts = this.phonebookservice.getContacts()
   }
+
+  addContact() {
+    this.phonebookservice.addContact();
+  }
+
+
 
 }

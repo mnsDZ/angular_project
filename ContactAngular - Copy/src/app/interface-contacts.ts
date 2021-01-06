@@ -1,5 +1,5 @@
 export interface InterfaceContacts {
-    name: string;
-    phone: string;
-    image:string;
+  name: string;
+  phone: string;
+  image: any;
 }
