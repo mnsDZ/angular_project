@@ -1,0 +1,15 @@
+table, th, td
+		
+		table
+		{
+			border-spacing: 15px;
+		}
+		th, td
+		{
+            padding:5px;
+            border: 3px ridge black;
+		}
+		th
+		{
+			text-align:left;
+		}

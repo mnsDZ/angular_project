@@ -1,0 +1,32 @@
+<table   >
+    
+<tr >
+
+    <th rowspan="3" >
+    <img  height=70, width=70, src="{{contact.image}}"  />
+    
+    </th>
+
+    <td>
+        <input type =" text" [(ngModel)]="contact.name">
+        <img *ngIf="contact.name === ''" src='./assets/images/warning.png' width="20px" height="20px">
+   
+    </td>
+    
+</tr>
+<tr >
+     <td >
+        <input type ="text" [(ngModel)]="contact.phone">
+        <img *ngIf="contact.phone === ''" src='./assets/images/warning.png' width="20px" height="20px">
+    </td>
+</tr>
+<tr>
+    <td>
+        <button (click)="showDetails()">Modifier</button> 
+    </td>
+</tr>
+    
+</table>
+
+
+    
