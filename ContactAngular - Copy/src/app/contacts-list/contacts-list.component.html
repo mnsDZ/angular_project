@@ -1,4 +1,4 @@
-<app-contact *ngFor="let contact of contacts" [name]="contact.name">
+<app-contact *ngFor="let contact of contacts; trackBy:trackItem" [name]="contact.name">
 </app-contact>
 
 <button (click)="addContact()">Add contact</button>

@@ -21,9 +21,10 @@ export class ContactsListComponent implements OnInit {
   addContact() {
     this.phonebookservice.addContact();
   }
- 
 
 
-
+  trackItem(index, item) {
+    return item.name + item.index;
+  }
 
 }

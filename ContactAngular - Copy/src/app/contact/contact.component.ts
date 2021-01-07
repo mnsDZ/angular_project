@@ -20,16 +20,15 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log("name=" + this.name);
     this.contact = this.phonebookservice.getContact(this.name);
   }
 
   showDetails() {
     this.router.navigate(['/details', { name: this.contact.name }]);
   }
-  deleteTodo(name){
-    this.phonebookservice.deleteTodo(this.contact.name)
-    }
+  delete() {
+    this.phonebookservice.deleteTodo(this.contact);
+  }
 
   selectFile(event) {
 
